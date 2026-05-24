@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help & Support | Ease Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon/easeconnectfav.PNG">
+</head>
+<body>
+  <!-- Standard header (kept consistent with site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Ease Connect Home">
+        <img class="brand-logo" src="images/logonew.png" alt="Ease Connect logo" />
+        <div></div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="property.html">Property</a>
+        <a href="vehiclesnew.html">Vehicles</a>
+        <a href="aboutnew.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <main>
+    <!-- Top-bar pill go back (per request) -->
+    
+
+    <section class="help-hero" aria-label="Help Center">
+      <div class="container help-hero__inner">
+        <div class="help-hero__grid">
+          <div class="help-hero__copy">
+            <p class="help-hero__kicker">Ease Connect Help Desk</p>
+            <h1 class="help-hero__title">How can we help you today?</h1><br>
+            <form class="help-search" action="" method="get" role="search" aria-label="Search help articles">
+              <label class="help-search__label" for="helpSearch" style="position:absolute;left:-9999px;">Search help</label>
+              <input
+                id="helpSearch"
+                class="help-search__input"
+                type="search"
+                name="q"
+                placeholder="Sorry, the search bar is currently unavailable."
+                autocomplete="off"
+              />
+              <button class="help-search__btn" type="submit" aria-label="Search">
+                <img src="assets/icons/search.png" alt="" aria-hidden="true" />
+              </button>
+            </form>
+          </div>
+
+          <div class="help-hero__media" aria-hidden="false">
+            <img
+              src="images/help.avif"
+              alt="Customer support and help desk vector illustration"
+              class="help-hero__image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-grid" aria-label="Help Topics">
+      <div class="container help-grid__inner">
+        <div class="help-grid__cards">
+          <a class="help-card" href="tel:+94777332145" aria-label="Account & Profile">
+            <span class="help-card__icon help-card__icon--mint" aria-hidden="true"></span>
+            <h3 class="help-card__title">Account &amp; Profile</h3>
+            <p class="help-card__desc">For any inquiries regarding customer accounts or privacy concerns, please contact our support team.</p>
+          </a>
+
+          <a class="help-card" href="tel:+94777332145" aria-label="Payments & Safety">
+            <span class="help-card__icon help-card__icon--blue" aria-hidden="true"></span>
+            <h3 class="help-card__title">Payments &amp; Safety</h3>
+            <p class="help-card__desc">For any inquiries regarding payments or safety concerns, please contact our support team.</p>
+          </a>
+
+          <a class="help-card" href="tel:+94777332145" aria-label="Posting Ads">
+            <span class="help-card__icon help-card__icon--amber" aria-hidden="true"></span>
+            <h3 class="help-card__title">Posting Ads</h3>
+            <p class="help-card__desc">For any inquiries regarding posted ads or boosting campaigns, please contact our support team.</p>
+          </a>
+
+          <a class="help-card" href="tel:+94777332145" aria-label="Broker Services">
+            <span class="help-card__icon help-card__icon--violet" aria-hidden="true"></span>
+            <h3 class="help-card__title">Broker Services</h3>
+            <p class="help-card__desc">For any inquiries regarding broker services or safety concerns, please contact our support team.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer help-footer" aria-label="Site footer">
+    <div class="container help-footer__inner">
+      <p class="help-footer__copyright">&copy; 2026 Ease Connect. All rights reserved.</p>
+      <div class="help-footer__links" aria-label="Utility links">
+                <a href="index.html">Home</a>
+        <a href="property.html">• Property</a>
+        <a href="vehicles.html">• Vehicles</a>
+        <a href="aboutnew.html">• About</a>
+        <a href="contact.html">• Contact</a>
+        <a href="help.html">• Help</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,324 @@
+/* Product Detail Redesign — premium card-based layout */
+
+/* 1) Asymmetric 2-col layout 70/30 on desktop */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* left ~70%, right ~30% */
+  gap: 34px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+/* Ensure main background feels clean */
+body {
+  background: #f8f9fa;
+}
+
+/* 2) Left: crisp grouped white card blocks */
+.product-gallery,
+.product-specs-card,
+.product-below,
+.product-core-info,
+.product-description {
+  border-radius: 16px;
+}
+
+/* Main media showcase card */
+.product-gallery {
+  background: #fff;
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 18px 16px 16px;
+}
+
+/* Title + header metadata should be inside the card */
+.product-detail-title,
+.product-detail-meta {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.product-detail-title {
+  margin: 14px 0 0;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+/* Location row + verified/member tag via flexbox */
+.product-detail-meta {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Convert existing metadata pills into location+verified style */
+.product-meta-item {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(248, 249, 250, 0.9);
+  border: 1px solid rgba(219, 219, 219, 0.85);
+}
+
+.product-meta-label {
+  color: #757575;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.product-meta-value {
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+/* Make verified/member tag look premium */
+.product-meta-item:has(.product-meta-eye) {
+  background: rgba(16, 133, 88, 0.10);
+  border-color: rgba(16, 133, 88, 0.28);
+}
+
+/* 2) Main image: rectangular with tall premium aspect ratio */
+.product-gallery-frame {
+  margin-top: 14px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(135deg, rgba(16, 133, 88, 0.10), rgba(230, 247, 241, 0.6));
+  border: 1px solid rgba(219, 219, 219, 0.35);
+}
+
+/* Tall aspect ratio */
+.product-gallery-main-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 420px;
+  max-height: 520px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* Counter overlay */
+.product-gallery-counter {
+  top: 14px;
+  left: 14px;
+  background: rgba(16, 133, 88, 0.94);
+  border-radius: 999px;
+  box-shadow: 0 16px 30px rgba(16, 133, 88, 0.25);
+}
+
+/* Thumbs should stay compact */
+.product-gallery-thumbs {
+  margin-top: 14px;
+}
+
+/* 3) Key specifications grid card (middle left) */
+.product-specs-card {
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 18px 16px;
+}
+
+.product-specs-card-header {
+  padding-bottom: 10px;
+}
+
+.product-specs-divider {
+  margin: 8px 0 16px;
+}
+
+/* Ensure 3-column feel for Bedrooms/Bathrooms/Land size */
+.product-specs-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.product-spec-item {
+  text-align: center;
+  align-items: center;
+}
+
+/* If icons exist in future, style them */
+.product-spec-item img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.product-spec-label {
+  margin-top: 4px;
+  color: #757575;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.product-spec-value {
+  font-weight: 1000;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+/* 4) Overview & description card */
+.product-description {
+  background: #fff;
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 16px 16px;
+  margin-top: 18px;
+}
+
+.product-description-body {
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* 5) Premium sticky sidebar card */
+.product-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+/* Sidebar overall floating look */
+.product-price-box,
+.product-contact-card,
+.product-specs-card {
+  border-radius: 16px;
+}
+
+.product-price-box {
+  background: #fff;
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 18px 16px;
+  position: relative;
+}
+
+/* Price highlighting */
+.product-price-prefix {
+  color: #757575;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.product-price-value {
+  color: #108558;
+  font-weight: 1000;
+  font-size: 34px;
+  letter-spacing: -0.03em;
+}
+
+.product-price-note {
+  color: #757575;
+  font-weight: 800;
+}
+
+/* CTA layout inside sidebar */
+.product-contact-card {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 18px 16px;
+}
+
+.product-contact-title {
+  font-size: 16px;
+  font-weight: 950;
+  color: #1a1a1a;
+}
+
+.product-contact-actions {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+/* Primary CTA pill */
+.product-action-btn {
+  width: 100%;
+  flex: none;
+  padding: 13px 16px;
+  border-radius: 100px;
+  font-weight: 1000;
+  justify-content: center;
+}
+
+/* Make WhatsApp the primary green button */
+.product-action-whatsapp {
+  background: #108558;
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(16, 133, 88, 0.20);
+}
+
+.product-action-whatsapp:hover {
+  background: #0e7a51;
+  box-shadow: 0 18px 40px rgba(16, 133, 88, 0.30);
+}
+
+/* Secondary CTA outline */
+.product-action-owner {
+  background: transparent;
+  border-color: rgba(16, 133, 88, 0.35);
+  color: #1a1a1a;
+}
+
+.product-action-owner:hover {
+  background: rgba(16, 133, 88, 0.12);
+  border-color: rgba(16, 133, 88, 0.65);
+}
+
+/* Negotiable + bookmark area */
+.product-specs-card {
+  margin-top: 16px;
+}
+
+.product-save-btn {
+  width: 100%;
+  border-radius: 100px;
+  padding: 12px 16px;
+}
+
+/* Make save button behave like a neat pill */
+.product-save-btn span {
+  font-weight: 950;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .product-gallery-main-img {
+    min-height: 280px;
+    max-height: 360px;
+    aspect-ratio: 16/10;
+  }
+
+  .product-specs-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-sidebar {
+    position: relative;
+    top: auto;
+  }
+
+  .product-contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

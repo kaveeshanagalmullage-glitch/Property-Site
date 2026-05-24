@@ -1,0 +1,254 @@
+/* =========================================================
+   Post Ad Modal — How it works (3-step redesign)
+   Appended to styles.css
+   ========================================================= */
+
+.post-ad-modal {
+  background: transparent;
+}
+
+/* grid wrapper used by this modal page */
+.post-ad-modal__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+}
+
+.post-ad-modal__info {
+  min-width: 0;
+}
+
+/* -------------------------
+   Steps layout
+------------------------- */
+.post-ad-steps {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+}
+
+.post-ad-step {
+  position: relative;
+  padding: 24px 22px;
+  background: var(--white);
+  border: 1px solid rgba(219, 219, 219, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+
+.post-ad-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 44px rgba(16, 133, 88, 0.10);
+  border-color: rgba(16, 133, 88, 0.28);
+}
+
+.post-ad-step__number {
+  position: absolute;
+  top: -18px;
+  right: 18px;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 900;
+  color: rgba(20, 20, 20, 0.08);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* pastel accents */
+.post-ad-step[data-step="1"]::before,
+.post-ad-step[data-step="2"]::before,
+.post-ad-step[data-step="3"]::before {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 140px;
+  border-radius: 999px;
+  opacity: 0.8;
+  filter: blur(0px);
+  pointer-events: none;
+}
+
+.post-ad-step[data-step="1"]::before {
+  background: rgba(255, 120, 120, 0.18);
+  left: -60px;
+  top: -30px;
+}
+
+.post-ad-step[data-step="2"]::before {
+  background: rgba(120, 140, 255, 0.16);
+  right: -90px;
+  top: -30px;
+}
+
+.post-ad-step[data-step="3"]::before {
+  background: rgba(16, 133, 88, 0.14);
+  left: -50px;
+  top: -20px;
+}
+
+.post-ad-step__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.post-ad-step__content--reverse {
+  flex-direction: row-reverse;
+}
+
+.post-ad-step__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-ad-step__text h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.post-ad-step__text p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  font-weight: 600;
+  max-width: 58ch;
+}
+
+/* -------------------------
+   Mockup cards
+------------------------- */
+.post-ad-step__mock {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+.post-ad-mock {
+  height: 190px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(219, 219, 219, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-ad-mock::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(500px 120px at 30% 0%, rgba(16, 133, 88, 0.10), rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
+
+.post-ad-mock__title {
+  position: relative;
+  z-index: 1;
+  font-weight: 950;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.78);
+}
+
+.post-ad-mock__bars {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.post-ad-mock__bars span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.08);
+}
+
+.post-ad-mock__bars--small span {
+  height: 8px;
+}
+
+.post-ad-mock__bars--pay span {
+  height: 10px;
+}
+
+.post-ad-mock__btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.06);
+  color: rgba(20, 20, 20, 0.72);
+  font-weight: 900;
+  cursor: pointer;
+  padding: 10px 12px;
+  transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+}
+
+.post-ad-mock__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.post-ad-mock__btn--mint {
+  background: var(--mint);
+  color: var(--white);
+  box-shadow: 0 14px 30px rgba(16, 133, 88, 0.18);
+}
+
+.post-ad-mock__btn--mint:hover {
+  background: #0e7a51;
+  box-shadow: 0 18px 45px rgba(16, 133, 88, 0.26);
+}
+
+.post-ad-mock__btn--ghost {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(16, 133, 88, 0.28);
+  color: var(--mint);
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+@media (max-width: 992px) {
+  .post-ad-modal__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .post-ad-step {
+    padding: 20px 16px;
+  }
+
+  .post-ad-step__content,
+  .post-ad-step__content--reverse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-ad-step__mock {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-ad-step__number {
+    right: 12px;
+  }
+}
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ease Connect | Vehicles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="property-wide-short-overrides.css">
+  <link rel="stylesheet" href="property-image-icons.css">
+  <link rel="icon" type="image/x-icon" href="favicon/easeconnectfav.PNG">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logonew.png" alt="Ceylon Deals logo">
+        <div>
+
+        </div>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="property.html">Property</a>
+        <a href="vehiclesnew.html">Vehicles</a>
+        <a href="aboutnew.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        
+       
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1>Vehicle Listings</h1>
+            <p>Browse cars, motorcycles, trucks, and other vehicles across Sri Lanka.</p>
+          </div>
+                  </div>
+        <div class="property-filters" aria-label="Property filters">
+          <button class="property-filter-btn active" type="button" data-category="all">All</button>
+          <button class="property-filter-btn" type="button" data-category="cars">Cars</button>
+          <button class="property-filter-btn" type="button" data-category="vans">Vans</button>
+          <button class="property-filter-btn" type="button" data-category="busses">Busses</button>
+        </div>
+
+        <div class="section" style="padding-top: 2rem; padding-bottom: 0;">
+          <h2>Recent Property Picks</h2>
+          <div class="property-list-rows property-results">
+            <article class="listing-row" data-category="cars">
+              <div class="listing-thumb" style="background-image:url('images/newcar.png');"></div>
+              <div class="listing-main">
+                <div class="listing-row-top">
+                  <div class="meta-row-inline">
+                    <div class="meta-item location-tag">
+                      <span class="meta-icon"></span>
+                      <span class="meta-text">Panadura</span>
+                    </div>
+                    <div class="meta-item member-tag">
+                      <span class="meta-badge"><span class="member-star" aria-hidden="true">★</span> MEMBER</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="listing-title">Nissan Pulsar (GR-series) 1999</h3>
+<div class="listing-specs">
+                  <div class="spec"><img class="spec-icon" src="assets/icons/icons8-calendar-1-100.png" alt="" aria-hidden="true">1999</div>
+                  <div class="spec"><img class="spec-icon" src="images/nissannew.png" alt="" aria-hidden="true"> Nissan</div>
+                  <div class="spec"><img class="spec-icon" src="assets/icons/icons8-engine-100.png" alt="" aria-hidden="true"> Excellent condition</div>
+                </div>
+                
+              </div>
+              <div class="listing-cta">
+                <div class="listing-price">Rs 3,400,000</div>
+                <div class="listing-actions">
+                  <button class="compare-btn" type="button" aria-label="Add to compare">Non-Negotiable</button>
+                  <a class="listing-arrow" href="productdetailnew3.html" aria-label="Open property details">→</a>
+                </div>
+              </div>
+            </article>            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Ease Connect</h3>
+        <p>Trusted broker platform for property, vehicles and more in Sri Lanka.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="property.html">• Property</a>
+        <a href="vehicles.html">• Vehicles</a>
+        <a href="aboutnew.html">• About</a>
+        <a href="contact.html">• Contact</a>
+        <a href="help.html">• Help</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+94 777332145</p>
+        <p>thushara01132@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ease Connect. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/+94777332145" target="_blank">💬</a>
+<script src="js/script.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const iconPaths = {
+        bed: 'assets/icons/bed.png',
+        bath: 'assets/icons/bath.png',
+        area: 'assets/icons/area.png'
+      };
+
+
+
+      const iconize = () => {
+        const iconSpans = document.querySelectorAll('.spec-icon[aria-hidden="true"]');
+
+        iconSpans.forEach((span) => {
+        const text = span.textContent.trim();
+
+        // Bedrooms / Bathrooms / Land size
+        let iconSrc = null;
+        if (text.includes('🛏')) iconSrc = iconPaths.bed;
+        else if (text.includes('🛁') || text.includes('🚿')) iconSrc = iconPaths.bath;
+        else if (text.includes('📐') || text.includes('📏')) iconSrc = iconPaths.area;
+
+        if (iconSrc) {
+          span.innerHTML = `<img src="${iconSrc}" alt="" aria-hidden="true" />`;
+        }
+        });
+
+      }; // spacing/alignment handled by property-image-icons.css
+      
+
+      iconize();
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+/* Product Detail page premium styles (append to styles.css) */
+

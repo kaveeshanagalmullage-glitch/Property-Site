@@ -1,0 +1,223 @@
+/* ==========================================
+   1. Reset & Global Styles
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #2b2d42;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   2. Layout Structure
+   ========================================== */
+.coming-soon-viewport {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+  padding: 2rem;
+}
+
+.coming-soon-main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 85vh;
+}
+
+.coming-soon__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.coming-soon__left {
+  flex: 1;
+  max-width: 550px;
+}
+
+.coming-soon__media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================
+   3. Typography & UI Elements
+   ========================================== */
+.coming-soon-kicker {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #2b2d42; /* Neon Teal Accent */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #2b2d42;
+  margin-bottom: 2.5rem;
+  letter-spacing: -1px;
+}
+
+/* ==========================================
+   4. Subscription Form
+   ========================================== */
+.coming-soon__subscribe {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Visually hide label but keep it accessible for screen readers */
+.coming-soon__email-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input[type="email"] {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #1f2833;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.952);
+  color: #000000;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: #66fcf1;
+  background-color: rgba(31, 40, 51, 0.8);
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+}
+
+input[type="email"]::placeholder {
+  color: #2b2d42;
+}
+
+button[type="submit"] {
+  padding: 1rem 2rem;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 8px;
+  color: #0b0c10;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #cccccc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px #cccccc;
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   5. Hero Image & Media
+   ========================================== */
+.coming-soon__hero-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Subtle floating animation */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ==========================================
+   6. Footer / Social Links
+   ========================================== */
+.coming-soon__footer {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(31, 40, 51, 0.5);
+}
+
+.coming-soon__footer a {
+  color: #2b2d42;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.coming-soon__footer a:hover {
+  color: #2b2d42;
+}
+
+/* ==========================================
+   7. Responsive Breakdown (Mobile / Tablets)
+   ========================================== */
+@media (max-width: 968px) {
+  .coming-soon__content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .coming-soon__left {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coming-soon__subscribe {
+    justify-content: center;
+  }
+
+  .coming-soon__footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon__subscribe {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+  }
+}

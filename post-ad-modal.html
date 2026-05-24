@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post an Ad | Ease Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon/easeconnectfav.PNG">
+</head>
+<body>
+
+  <!-- Modal markup (includes overlay + close) -->
+  <div class="modal-overlay" id="postAdOverlay" aria-hidden="true"></div>
+
+  <section class="post-ad-modal" id="postAdModal" role="dialog" aria-modal="true" aria-labelledby="postAdTitle" aria-hidden="true">
+    <div class="modal-topbar">
+      <a class="modal-goback text-link" href="index.html" aria-label="Go back">
+        <span class="modal-goback-icon" aria-hidden="true">←</span>
+        Go Back
+      </a>
+    </div>
+
+    <header class="post-ad-howitworks">
+      <div class="post-ad-howitworks__kicker">See how it works</div>
+      <h2 class="post-ad-howitworks__title">Post your listing in 3 simple steps</h2>
+      <p class="post-ad-howitworks__subtitle">Create, send, and publish—verified listings with a clean review flow.</p>
+    </header>
+
+    <div class="post-ad-modal__grid">
+
+      <aside class="post-ad-modal__info">
+        <h2 id="postAdTitle">Post an Ad</h2>
+        <p class="post-ad-modal__lead">Create your account in seconds and start posting verified listings.</p>
+
+        <div class="post-ad-steps" aria-label="How it works">
+              <div class="post-ad-step" data-step="1">
+            <div class="post-ad-step__content">
+              <div class="post-ad-step__left">
+                <div class="post-ad-step__number" aria-hidden="true">01</div>
+                <div class="post-ad-step__mock" aria-hidden="true">
+                  <img
+                    src="images/Gemini_Generated_Image_vxh8uevxh8uevxh8.png"
+                    alt="Illustration of a person taking photos for a listing"
+                    class="step-illustration"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="post-ad-step__text">
+                <h3>Step 01: Take Photos &amp; Prepare Details</h3>
+                <p>Snap photos of your vehicle, property, land, or any listing item—then prepare the key details we need.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-ad-step" data-step="2">
+            <div class="post-ad-step__content">
+              <div class="post-ad-step__text">
+                <h3>Step 02: Submit via WhatsApp or Socials</h3>
+                <p>Send your listing details directly to our WhatsApp or Facebook page so we can review and confirm your post.</p>
+              </div>
+
+              <div class="post-ad-step__mock" aria-hidden="true">
+                <div class="post-ad-step__right">
+                  <div class="post-ad-step__number" aria-hidden="true">02</div>
+
+                  <img
+                    src="images/mailsend.avif"
+                    alt="Illustration of sending a listing via paper airplane mail"
+                    class="step-illustration"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="post-ad-step" data-step="3">
+            <div class="post-ad-step__content">
+              <div class="post-ad-step__left">
+                <div class="post-ad-step__number" aria-hidden="true">03</div>
+                <div class="post-ad-step__mock" aria-hidden="true">
+                  <img
+                    src="images/payment.avif"
+                    alt="Illustration of mobile payment and digital checkout processing"
+                    class="step-illustration"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+
+              <div class="post-ad-step__text">
+                <h3>Step 03: Make Payment &amp; Publish</h3>
+                <p>Pay the charges to finalize. Once confirmed, we push your listing live on the website and on Facebook.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <footer class="modal-footer">
+        <div class="modal-footer__content">
+          <p>&copy; 2026 Ease Connect. All rights reserved.</p>
+          <div class="modal-footer__links">
+            <a href="help.html">Contact our help center for support ➜</a>
+            
+          </div>
+        </div>
+      </footer>
+
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const overlay = document.getElementById('postAdOverlay');
+      const modal = document.getElementById('postAdModal');
+      const closeBtn = document.getElementById('postAdClose');
+
+      const open = () => {
+        if (!overlay || !modal) return;
+        overlay.style.display = 'block';
+        modal.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'auto';
+      };
+
+      const close = () => {
+        if (!overlay || !modal) return;
+        overlay.style.display = 'none';
+        modal.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      closeBtn?.addEventListener('click', close);
+      overlay?.addEventListener('click', close);
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+
+      // Open instantly when this page loads
+      open();
+    })();
+  </script>
+
+  <!-- This page is meant to be opened in a new view (modal behaviour is self-contained). -->
+</body>
+</html>
+
