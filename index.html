@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Easeconnect brings people, places, and possibilities closer."
+    />
+    <title>Easeconnect — Closer, by design</title>
+    <link rel="icon" type="image/png" href="Assets/logo/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="Assets/Videos/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <nav class="hero__nav" aria-label="Main navigation">
+          <a class="brand" href="#home" aria-label="Easeconnect home">
+            <img class="brand__logo" src="Assets/logo/logo.png" alt="" />
+            <span>Easeconnect</span>
+          </a>
+
+          <div class="hero__links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            
+            
+          </div>
+
+          <a class="nav-cta" href="#contact">
+            Let's connect
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </nav>
+
+        <div class="hero__content">
+          
+          <h1 id="hero-title">Empowering brands<br />to suit the <span>digital era.</span></h1>
+          <div class="hero__bottom">
+            <p class="hero__description">
+              We design solutions to help brands to be seen more and heard more, and to connect with their audience in a more meaningful way.
+            </p>
+            <a class="hero__button" id="discover" href="#home">
+              Discover the difference
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <a class="scroll-pill" href="#discover" aria-label="Scroll down to discover">
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about__top">
+          <div class="about__intro">
+            <h2 id="about-title">Data + Tech</h2>
+            <p>
+              Established in 2012, Pivot is the first and number one Asian American
+              advertising agency with a focus on digital and programmatic advertising.
+              We leverage data and audience insights for informed decision-making and
+              consistently seek business solutions in a world of personalized digital
+              marketing, with the right message delivered to the right people at the
+              right time. Our on-demand experts manage and optimize advertising
+              campaigns in the industry-leading adtech platforms (DSPs) through
+              strategic, programmatic activation, recommendation, audience planning,
+              media buying, high-impact creative activation, and unified analytics
+              solutions.
+            </p>
+          </div>
+
+          <figure class="about__image">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+              alt="Creative technology team collaborating"
+            />
+          </figure>
+        </div>
+
+        <div class="about__cards">
+          <article class="about__card">
+            <h3>Our Vision</h3>
+            <p>The multimeter of brand + audience</p>
+          </article>
+          <article class="about__card">
+            <h3>Our Culture</h3>
+            <p>We discover the unexpected through the data at scale</p>
+          </article>
+          <article class="about__card">
+            <h3>Our Values</h3>
+            <p>
+              We strive to apply innovation and new technologies for measurable
+              performance improvements
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="services__heading">
+          <p class="services__eyebrow">What we do</p>
+          <h2 id="services-title">Our Services</h2>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <i class="fa-solid fa-bullhorn service-card__icon" aria-hidden="true"></i>
+            <h3>Digital Marketing</h3>
+            <p>With expertise in SEO, PPC, social media, and content marketing, we help boost your online visibility.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about Digital Marketing">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-pen-ruler service-card__icon" aria-hidden="true"></i>
+            <h3>UI/UX Design</h3>
+            <p>Our designers stay ahead of design trends, creating fresh and innovative ideas for the table.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about UI/UX Design">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-code service-card__icon" aria-hidden="true"></i>
+            <h3>Development</h3>
+            <p>We stay ahead with the latest technologies for future-proof solutions.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about Development">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-bezier-curve service-card__icon" aria-hidden="true"></i>
+            <h3>Graphic Design</h3>
+            <p>Our designers bring artistic flair and innovative graphic impact, ensuring unique and visually stunning outcomes.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about Graphic Design">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-tower-broadcast service-card__icon" aria-hidden="true"></i>
+            <h3>Broadcasting</h3>
+            <p>From concept to post-production, we create visually stunning videos for diverse platforms.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about Broadcasting">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-camera service-card__icon" aria-hidden="true"></i>
+            <h3>Photography</h3>
+            <p>Our photographers are passionate about capturing the essence and emotion in every frame.</p>
+            <a class="service-card__link" href="#discover" aria-label="Learn more about Photography">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <header class="testimonials__heading">
+          <p>Testimonials</p>
+          <h2 id="testimonials-title">What our clients say about our studio</h2>
+        </header>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              The Easeconnect team demonstrated strong UI/UX expertise throughout the project.
+              They carefully considered our requirements and offered thoughtful suggestions and
+              solutions, ensuring the designs were well-suited to the applications' specific needs.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Nick Valentino</h3>
+              <p>Business Analyst, Sinitan Group</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              I am extremely satisfied with the services provided by this app development team.
+              The application they built is highly intuitive, responsive, and perfectly meets all
+              my expectations. Every feature is well optimized, and the overall experience is
+              seamless and enjoyable.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Fircandy Pinardy</h3>
+              <p>CEO, Fartech Indonesia</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              Easeconnect delivered exceptional results in redesigning our app's UI/UX. Working
+              from our initial documentation, they transformed our vision into an intuitive and
+              polished digital experience. Their attention to detail and understanding of user
+              behavior was excellent.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Volt Kovac</h3>
+              <p>Snapcash</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              The resulting design was not only aesthetically pleasing but also incredibly effective,
+              featuring a clean and user-friendly interface. Easeconnect made the entire process
+              easy and efficient, and we are excited to continue our partnership.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Sofia Ramirez</h3>
+              <p>Creative Director, Northline</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              Moreover, their customer support is outstanding. They respond promptly to any inquiries
+              or issues, and provide practical solutions. Overall, I highly recommend their team to
+              anyone looking for a reliable and high-quality mobile application solution.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Marcus Chen</h3>
+              <p>Founder, Luma Labs</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              The team brought clarity, creativity, and care to every stage of the project. Their
+              communication was consistent and their recommendations were practical. We would gladly
+              recommend Easeconnect to any brand seeking a polished, collaborative design partner.
+            </p>
+            <footer class="testimonial-card__client">
+              <h3>Emma Laurent</h3>
+              <p>Marketing Lead, Elevate</p>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <header class="contact__heading">
+          <p>Get in touch</p>
+          <h2 id="contact-title">Let's start a conversation</h2>
+        </header>
+
+        <div class="contact__grid">
+          <a class="contact-item" href="mailto:hello@easeconnect.com">
+            <span class="contact-item__icon" aria-hidden="true">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span class="contact-item__content">
+              <span>Email</span>
+              <strong>hello@easeconnect.com</strong>
+            </span>
+          </a>
+
+          <a class="contact-item" href="tel:+15550145820">
+            <span class="contact-item__icon" aria-hidden="true">
+              <i class="fa-solid fa-phone"></i>
+            </span>
+            <span class="contact-item__content">
+              <span>Phone</span>
+              <strong>+1 (555) 014-5820</strong>
+            </span>
+          </a>
+
+          <a class="contact-item" href="https://maps.google.com/?q=214+Market+Street+San+Francisco+CA+94105" target="_blank" rel="noreferrer">
+            <span class="contact-item__icon" aria-hidden="true">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <span class="contact-item__content">
+              <span>Address</span>
+              <strong>214 Market Street, San Francisco, CA 94105</strong>
+            </span>
+          </a>
+
+          <a class="contact-item" href="https://www.facebook.com/easeconnect" target="_blank" rel="noreferrer">
+            <span class="contact-item__icon" aria-hidden="true">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+            <span class="contact-item__content">
+              <span>Facebook</span>
+              <strong>facebook.com/easeconnect</strong>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <a class="footer__brand" href="#home" aria-label="Easeconnect home">
+          <img src="Assets/logo/logo.png" alt="" />
+          <span>Easeconnect</span>
+        </a>
+
+        <p>
+          Empowering brands to suit the digital era through design,
+          technology, and meaningful connections.
+        </p>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="copyright-year">2026</span> Easeconnect. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="mailto:hello@easeconnect.com">Email</a>
+          <a href="https://www.facebook.com/easeconnect" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
